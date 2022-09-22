@@ -103,6 +103,7 @@
   .show > .nav-link,
   .nav-link.active {
     color: var(--#{$prefix}navbar-active-color);
+    font-family: AvenirLTStdHeavy;
   }
 
   .dropdown-menu {
