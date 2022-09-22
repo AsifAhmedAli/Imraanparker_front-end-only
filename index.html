@@ -31,16 +31,16 @@
           >
             <ul class="navbar-nav align-items-center">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="#home">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About us</a>
+                <a class="nav-link" href="#video">About us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">FAQ's</a>
+                <a class="nav-link" href="#faqs">FAQ's</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Careers</a>
+                <a class="nav-link" href="#stay-informed">Careers</a>
               </li>
               <li class="nav-item">
                 <a href="" class="btn btn-primary rounded-pill">Download App</a>
@@ -51,15 +51,60 @@
       </nav>
     </header>
 
-    <main>
+    <main
+      data-bs-spy="scroll"
+      data-bs-target="#navbar-example2"
+      data-bs-offset="0"
+      class="scrollspy-example"
+      tabindex="0"
+    >
       <section id="home" class="home">
-        <div class="container"></div>
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-7">
+              <div class="box">
+                <div class="text-container">
+                  <h1>Invest in a sharp future with <span>MINTJAR</span></h1>
+                  <h2>Invest your money smartly.</h2>
+                  <button class="btn btn-primary rounded-pill">
+                    Join the Club
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="video" class="video">
+        <div class="container">
+          <div class="row justify-content-between align-items-center gy-4">
+            <div class="col-lg-6">
+              <div class="poster-video-container">
+                <video
+                  poster="/assets/images/image_poster.png"
+                  class="poster-video"
+                >
+                  <source src="movie.mp4" type="video/mp4" />
+                  <source src="movie.ogg" type="video/ogg" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <h4 class="title text-center">
+                First time? Don’t worry. Just check out our easy tutorial on how
+                to get started.
+              </h4>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="earn" class="earn">
         <div class="container">
           <div class="row">
-            <div class="col-md-7 mx-auto">
+            <div class="col-lg-7 mx-auto">
               <h4 class="title">Check how much you can earn by investing.</h4>
               <form action="">
                 <div class="row">
@@ -77,8 +122,8 @@
                 </div>
               </form>
               <div class="text-center">
-                <div class="sub-type">
-                  <p>R 100 /</p>
+                <div class="sub-type flex-wrap">
+                  <p class="text-nowrap">R 100 /</p>
                   <div class="dropdown">
                     <button
                       class="btn btn-accent dropdown-toggle"
@@ -120,7 +165,9 @@
               </div>
             </div>
             <div class="col-12 text-center">
-                <button class="btn btn-primary rounded-pill">Start Investing</button>
+              <button class="btn btn-primary rounded-pill">
+                Start Investing
+              </button>
             </div>
           </div>
         </div>
@@ -228,15 +275,15 @@
       <section id="stay-informed" class="stay-informed">
         <div class="container">
           <div class="box">
-            <div class="row justify-content-between gy-4">
+            <div class="row justify-content-between gy-lg-0 gy-md-5 gy-4">
               <div class="col-lg-5">
-                <h5 class="title">Stay Informed</h5>
-                <h5 class="info">
+                <h5 class="title text-lg-start text-center">Stay Informed</h5>
+                <h5 class="info text-lg-start text-center">
                   Follow us on social media for some amazing finance tips or
                   sign up to get our weekly blogs dlivered straight into your
                   inbox so you always know.
                 </h5>
-                <div class="links">
+                <div class="links justify-content-lg-start justify-content-center">
                   <a href="">
                     <img src="./assets/images/fb.svg" alt="" />
                   </a>
@@ -277,6 +324,53 @@
         </div>
       </section>
     </main>
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row gy-4 align-items-center">
+                <div class="col-lg-6">
+                    <img src="./assets/images/logo_white.svg" alt="">
+                </div>
+                <div class="col-lg-6">
+                    <div class="row gy-4">
+                        <div class="col-lg-6">
+                            <h5 class="title">Helpful Links</h5>
+                            <ul class="ps-0 list-unstyled">
+                                <li>
+                                    <a href="">About Us</a>
+                                </li>
+                                <li>
+                                    <a href="">Faq's</a>
+                                </li>
+                                <li>
+                                    <a href="">Our Services</a>
+                                </li>
+                                <li>
+                                    <a href="">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="text-center">
+                                <h5 class="title">Follow Us</h5>
+                                <div class="social d-flex align-items-center justify-content-between">
+                                    <a href="">
+                                        <img src="./assets/images/facebook_white.svg" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img src="./assets/images/twitter_white.svg" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img src="./assets/images/instagram_white.svg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="./assets/js/popper.min.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>

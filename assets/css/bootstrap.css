@@ -11923,6 +11923,8 @@ textarea.form-control-lg {
 }
 
 header {
+  position: sticky !important;
+  top: 0;
   background-color: white;
   box-shadow: 0px 4px 25px #ddfff6;
   position: relative;
@@ -11941,10 +11943,44 @@ header .navbar-nav .nav-item .nav-link.active {
 
 .home {
   min-height: 707px;
+  padding: 0 135px;
   background-image: url("../images/home/half_circle.svg"), url("../images/home/rect.png"), url("../images/home/rect.png"), url("../images/home/percentage.png"), url("../images/home/arrow.png"), url("../images/home/main.svg");
-  background-size: 139px 279px, 283px 522px, 283px 522px, 50px 119px, 234px 180px, 100%;
+  background-size: 139px 279px, 283px 522px, 283px 522px, 50px 119px, 234px 180px, cover;
   background-position: top left -30px, left 189px top, bottom 83px right 63px, bottom 40% left 40%, top 26px right 6px, center;
   background-repeat: no-repeat;
+}
+.home .box {
+  min-height: 707px;
+  position: relative;
+}
+.home .box .text-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.home .box .text-container h1, .home .box .text-container .h1 {
+  font-size: 32px;
+  letter-spacing: 0.17em;
+  font-family: AvenirLTStdBlack;
+  color: #5f5f5e;
+  margin-bottom: 33px;
+  position: relative;
+}
+.home .box .text-container h1 span, .home .box .text-container .h1 span {
+  display: block;
+  text-transform: uppercase;
+}
+.home .box .text-container h1::before, .home .box .text-container .h1::before {
+  position: absolute;
+  content: "";
+  border-bottom: 5px solid #FF6E5A;
+  width: 137px;
+  bottom: -12px;
+}
+.home .box .text-container h2, .home .box .text-container .h2 {
+  font-size: 24px;
+  color: #5f5f5e;
+  margin-bottom: 44px;
 }
 
 .faqs {
@@ -11952,9 +11988,47 @@ header .navbar-nav .nav-item .nav-link.active {
   overflow: hidden;
 }
 
+.video {
+  padding: 90px 90px 0;
+  background-image: url("../images/home/arrow_left.png"), url("../images/home/percentage.png");
+  background-repeat: no-repeat;
+  background-size: 131px 276px, 50px 119px;
+  background-position: right bottom, center;
+}
+.video .title {
+  font-size: 32px;
+  color: #5f5f5e;
+  font-family: AvenirLTStdBlack;
+}
+.video .poster-video-container {
+  position: relative;
+}
+.video .poster-video-container video {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height: auto;
+}
+.video .poster-video-container::before {
+  position: absolute;
+  content: "";
+  z-index: 2;
+  background-image: url("../images/half_circle_left.svg");
+  background-repeat: no-repeat;
+  background-size: 279px 279px;
+  width: 279px;
+  height: 279px;
+  left: -50%;
+  top: -50%;
+  transform: translate(50%, 100%);
+}
+
 .earn {
   padding-top: 60px;
   padding-bottom: 60px;
+  background-image: url("../images/home/percentage.png");
+  background-repeat: no-repeat;
+  background-position: left 6px top 20%;
 }
 .earn .title {
   font-size: 32px;
@@ -12012,13 +12086,13 @@ header .navbar-nav .nav-item .nav-link.active {
 .earn .sub-type button {
   padding: 10px 44px;
   border-radius: 50px;
-  background-color: #DDFFF6;
-  border-color: #DDFFF6;
+  background-color: #ddfff6;
+  border-color: #ddfff6;
   margin-left: 12px;
 }
 .earn .sub-type .dropdown-menu {
   border-radius: 50px;
-  background-color: #DDFFF6;
+  background-color: #ddfff6;
   border-color: #53C0A4;
 }
 .earn .divider {
@@ -12046,6 +12120,12 @@ header .navbar-nav .nav-item .nav-link.active {
   border-radius: 10px;
   background-color: #f5f5f5;
   padding: 56px 114px;
+}
+@media screen and (max-width: 768px) {
+  .stay-informed .box {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 .stay-informed .box .title {
   font-size: 32px;
@@ -12085,6 +12165,39 @@ header .navbar-nav .nav-item .nav-link.active {
 }
 .stay-informed .box button[type=submit] {
   min-width: 264px;
+}
+
+footer {
+  padding: 1.5rem 0;
+  background-color: #5F5F5E;
+}
+@media screen and (min-width: 1366px) {
+  footer {
+    padding: 70px 60px;
+  }
+}
+footer * {
+  color: white;
+}
+footer .title {
+  margin-bottom: 20px;
+  font-family: AvenirLTStdBlack;
+}
+footer ul > li {
+  padding: 12px 0;
+}
+footer ul > li a {
+  text-decoration: none;
+}
+footer .social {
+  padding-top: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
 }
 
 /*# sourceMappingURL=bootstrap.css.map */
