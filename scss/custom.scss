@@ -1,0 +1,29 @@
+@font-face {
+  font-family: AvenirLTStdRoman;
+  src: url("../font/AvenirLTStdRoman.otf") format("opentype"),
+    url("../font/AvenirLTStdRoman.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: AvenirLTStdMedium;
+  src: url("../font/AvenirLTStdMedium.otf") format("opentype"),
+    url("../font/AvenirLTStdMedium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: AvenirLTStdHeavy;
+  src: url("../font/AvenirLTStdHeavy.otf") format("opentype"),
+    url("../font/AvenirLTStdHeavy.woff2") format("woff2");
+}
+
+.fw-roman {
+  font-family: AvenirLTStdRoman;
+}
+
+.fw-medium {
+  font-family: AvenirLTStdMedium;
+}
+
+.fw-bold {
+  font-family: AvenirLTStdHeavy;
+}
