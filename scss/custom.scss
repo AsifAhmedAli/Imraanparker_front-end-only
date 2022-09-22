@@ -79,7 +79,142 @@ header {
   background-repeat: no-repeat;
 }
 
-.faqs{
-  background-color: #DDFFF6;
+.faqs {
+  background-color: #ddfff6;
   overflow: hidden;
+}
+
+.earn {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  .title {
+    font-size: 32px;
+    font-family: AvenirLTStdBlack;
+    color: #5f5f5e;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    border-radius: 25px;
+    background: #ddfff6;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+    margin-bottom: 44px;
+    &:hover {
+      opacity: 1;
+    }
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: $accent;
+      cursor: pointer;
+    }
+    &::-moz-range-thumb {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: $accent;
+      cursor: pointer;
+    }
+  }
+  .sub-type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p,
+    button,
+    .dropdown-item {
+      font-size: 32px;
+      color: black;
+      margin-bottom: 0;
+      font-family: AvenirLTStd;
+      padding: 13px 34px;
+      border-radius: 50px;
+    }
+    button{
+      padding: 10px 44px;
+      border-radius: 50px;
+      background-color: #DDFFF6;
+      border-color: #DDFFF6;
+      margin-left: 12px;
+    }
+    .dropdown-menu{
+      border-radius: 50px;
+      background-color: #DDFFF6;
+      border-color: $accent;
+    }
+  }
+  .divider{
+    height: 90px;
+  }
+  .box{
+    text-align: center;
+    .money{
+      font-size: 32px;
+      color: black;
+      margin-bottom: 12px;
+      font-family: AvenirLTStdRoman;
+    }
+    .duration{
+      font-size: 15px;
+      font-family: AvenirLTStd;
+    }
+  }
+}
+
+.stay-informed {
+  padding-top: 62px;
+  padding-bottom: 46px;
+  .box {
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    padding: 56px 114px;
+    .title {
+      font-size: 32px;
+      font-family: AvenirLTStdBlack;
+      margin-bottom: 24px;
+      color: #5f5f5e;
+    }
+    .info {
+      color: #5f5f5e;
+      margin-bottom: 33px;
+    }
+    .links {
+      display: flex;
+      align-items: center;
+      a {
+        display: inline-block;
+        &:not(:last-child) {
+          margin-right: 98px;
+        }
+        img {
+          max-height: 44px;
+          max-width: 44px;
+          object-fit: contain;
+          object-position: center;
+        }
+      }
+    }
+    .my-input {
+      font-size: 20px;
+      padding: 24px 32px;
+      border-radius: 50px;
+      display: block;
+      background-color: white;
+      border: none;
+      width: 100%;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    }
+    button[type="submit"] {
+      min-width: 264px;
+    }
+  }
 }
