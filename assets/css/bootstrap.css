@@ -12030,6 +12030,9 @@ header .navbar-nav .nav-item .nav-link.active {
   background-repeat: no-repeat;
   background-position: left 6px top 20%;
 }
+.earn .earn-dropdown input[type=radio] {
+  display: none;
+}
 .earn .title {
   font-size: 32px;
   font-family: AvenirLTStdBlack;

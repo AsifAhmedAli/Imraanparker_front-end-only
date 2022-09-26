@@ -31,7 +31,9 @@
           >
             <ul class="navbar-nav align-items-center">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                <a class="nav-link active" aria-current="page" href="#home"
+                  >Home</a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#video">About us</a>
@@ -111,11 +113,11 @@
                   <div class="col-12">
                     <input
                       type="range"
-                      name=""
-                      id=""
-                      min="10"
-                      max="100"
-                      value="25"
+                      name="earning"
+                      id="earnSlider"
+                      min="50"
+                      max="5000"
+                      value="100"
                       class="slider"
                     />
                   </div>
@@ -123,21 +125,45 @@
               </form>
               <div class="text-center">
                 <div class="sub-type flex-wrap">
-                  <p class="text-nowrap">R 100 /</p>
-                  <div class="dropdown">
+                  <p class="text-nowrap">
+                    R <span id="sliderValue">100</span> /
+                  </p>
+                  <div class="dropdown earn-dropdown" id="earnDropdown">
                     <button
                       class="btn btn-accent dropdown-toggle"
                       type="button"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
+                      id="earnBtnText"
                     >
                       per month
                     </button>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">per month</a></li>
-                      <li>
-                        <a class="dropdown-item" href="#">per week</a>
-                      </li>
+                      <form action="" name="myForm">
+                        <li>
+                          <input
+                            type="radio"
+                            name="earnBy"
+                            id="perMonth"
+                            value="per month"
+                            checked
+                          />
+                          <label for="perMonth" class="dropdown-item"
+                            >per month</label
+                          >
+                        </li>
+                        <li>
+                          <input
+                            type="radio"
+                            name="earnBy"
+                            id="perWeek"
+                            value="per week"
+                          />
+                          <label for="perWeek" class="dropdown-item"
+                            >per week</label
+                          >
+                        </li>
+                      </form>
                     </ul>
                   </div>
                 </div>
@@ -148,19 +174,19 @@
           <div class="row gy-4">
             <div class="col-md-4">
               <div class="box">
-                <p class="money">R 100,000</p>
+                <p class="money">R <span id="oneYearVal">100,000</span></p>
                 <p class="duration">1 year</p>
               </div>
             </div>
             <div class="col-md-4">
               <div class="box">
-                <p class="money">R 500,000</p>
+                <p class="money">R <span id="fiveYearVal">500,000</span></p>
                 <p class="duration">5 year</p>
               </div>
             </div>
             <div class="col-md-4">
               <div class="box">
-                <p class="money">R 10,000,000</p>
+                <p class="money">R <span id="tenYearVal">10,000,000</span></p>
                 <p class="duration">10 year</p>
               </div>
             </div>
@@ -283,7 +309,9 @@
                   sign up to get our weekly blogs dlivered straight into your
                   inbox so you always know.
                 </h5>
-                <div class="links justify-content-lg-start justify-content-center">
+                <div
+                  class="links justify-content-lg-start justify-content-center"
+                >
                   <a href="">
                     <img src="./assets/images/fb.svg" alt="" />
                   </a>
@@ -326,53 +354,118 @@
     </main>
 
     <footer>
-        <div class="container-fluid">
-            <div class="row gy-4 align-items-center">
-                <div class="col-lg-6">
-                    <img src="./assets/images/logo_white.svg" alt="">
+      <div class="container-fluid">
+        <div class="row gy-4 align-items-center">
+          <div class="col-lg-6">
+            <img src="./assets/images/logo_white.svg" alt="" />
+          </div>
+          <div class="col-lg-6">
+            <div class="row gy-4">
+              <div class="col-lg-6">
+                <h5 class="title">Helpful Links</h5>
+                <ul class="ps-0 list-unstyled">
+                  <li>
+                    <a href="">About Us</a>
+                  </li>
+                  <li>
+                    <a href="">Faq's</a>
+                  </li>
+                  <li>
+                    <a href="">Our Services</a>
+                  </li>
+                  <li>
+                    <a href="">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <div class="text-center">
+                  <h5 class="title">Follow Us</h5>
+                  <div
+                    class="social d-flex align-items-center justify-content-between"
+                  >
+                    <a href="">
+                      <img src="./assets/images/facebook_white.svg" alt="" />
+                    </a>
+                    <a href="">
+                      <img src="./assets/images/twitter_white.svg" alt="" />
+                    </a>
+                    <a href="">
+                      <img src="./assets/images/instagram_white.svg" alt="" />
+                    </a>
+                  </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="row gy-4">
-                        <div class="col-lg-6">
-                            <h5 class="title">Helpful Links</h5>
-                            <ul class="ps-0 list-unstyled">
-                                <li>
-                                    <a href="">About Us</a>
-                                </li>
-                                <li>
-                                    <a href="">Faq's</a>
-                                </li>
-                                <li>
-                                    <a href="">Our Services</a>
-                                </li>
-                                <li>
-                                    <a href="">Contact Us</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="text-center">
-                                <h5 class="title">Follow Us</h5>
-                                <div class="social d-flex align-items-center justify-content-between">
-                                    <a href="">
-                                        <img src="./assets/images/facebook_white.svg" alt="">
-                                    </a>
-                                    <a href="">
-                                        <img src="./assets/images/twitter_white.svg" alt="">
-                                    </a>
-                                    <a href="">
-                                        <img src="./assets/images/instagram_white.svg" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </footer>
 
     <script src="./assets/js/popper.min.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
+
+    <script>
+      function changePlan(textValue) {
+        var profit = textValue * 0.2;
+        var oneYearProfit = profit * earnDuration;
+        var fiveYearProfit = profit * earnDuration * 5;
+        var tenYearProfit = profit * earnDuration * 10;
+        oneYearVal = Math.trunc(oneYearProfit);
+        fiveYearVal = Math.trunc(fiveYearProfit);
+        tenYearVal = Math.trunc(tenYearProfit);
+        oneYearValue.innerHTML = oneYearVal
+          .toString()
+          .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        fiveYearValue.innerHTML = fiveYearVal
+          .toString()
+          .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        tenYearValue.innerHTML = tenYearVal
+          .toString()
+          .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      }
+
+      function changeValue(textValue) {
+        sliderValue.innerHTML = textValue;
+        changePlan(textValue);
+      }
+      var slider = document.getElementById("earnSlider");
+      var sliderValue = document.getElementById("sliderValue");
+      var oneYearValue = document.getElementById("oneYearVal");
+      var fiveYearValue = document.getElementById("fiveYearVal");
+      var tenYearValue = document.getElementById("tenYearVal");
+
+      var earnDuration;
+
+      slider.onchange = function () {
+        var listArray = document.querySelector(
+          'input[name="earnBy"]:checked'
+        ).value;
+        if (listArray == "per week") {
+          earnDuration = 52;
+          console.log(earnDuration);
+        } else {
+          earnDuration = 12;
+          console.log(earnDuration);
+        }
+        myValue = slider.value;
+        changeValue(myValue);
+      };
+    </script>
+
+    <script>
+      var earnBtnText = document.getElementById("earnBtnText");
+      var rad = document.myForm.earnBy;
+      var prev = null;
+      for (var i = 0; i < rad.length; i++) {
+        rad[i].addEventListener("change", function () {
+          if (this.value == "per week") {
+            earnBtnText.innerHTML = "per week";
+          } else {
+            earnBtnText.innerHTML = "per month";
+          }
+        });
+      }
+    </script>
   </body>
 </html>

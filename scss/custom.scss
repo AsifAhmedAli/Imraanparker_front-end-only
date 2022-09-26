@@ -162,6 +162,11 @@ header {
   background-image: url("../images/home/percentage.png");
   background-repeat: no-repeat;
   background-position: left 6px top 20%;
+  .earn-dropdown{
+    input[type=radio]{
+      display: none;
+    }
+  }
   .title {
     font-size: 32px;
     font-family: AvenirLTStdBlack;
